@@ -1,0 +1,232 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente predeterminada */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #cdcdcd;
+    color: #252222;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* Encabezado */
+header {
+    background-color: #000000; 
+    color: #fffffffe;
+    padding: 30px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-out;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #C0C0C0; /* Plata metálico */
+}
+
+/* Hero section */
+.hero {
+    background-image: url('imagenes/joyas/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hero .home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero h2 {
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.hero p {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    background-color: #C0C0C0; /* Plata metálico */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #FFD700; /* Oro metálico */
+    transform: scale(1.1);
+}
+
+/* Animaciones de aparición */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.section-info, .section-collections, .section-contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Sección de colecciones */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.product {
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    background-color: #E5E4E2; /* Platino metálico */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.product .price {
+    font-size: 18px;
+    color: #FFD700; /* Oro metálico */
+    margin-bottom: 15px;
+}
+
+.product .btn {
+    background-color: #B87333; /* Cobre metálico */
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product .btn:hover {
+    background-color: #CD7F32; /* Bronce metálico */
+    transform: scale(1.05);
+}
+
+/* Estilo de formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea,
+form button {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #E5E4E2; /* Platino metálico */
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #FFD700; /* Oro metálico */
+}
+
+form button {
+    background-color: #FFD700; /* Oro metálico */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #C0C0C0; /* Plata metálico */
+    transform: scale(1.05);
+}
+
+/* Pie de página */
+footer {
+    background-color: #B87333; /* Cobre metálico */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
